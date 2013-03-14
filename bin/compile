@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+PROJ_BINARY="https://strasbourg-data.s3.amazonaws.com/proj-4.8.tgz"
+PROJ_VENDOR="vendor/proj"
+
+mkdir -p $1/$PROJ_VENDOR
+curl $PROJ_BINARY -o - | tar -xz -C $1/$PROJ_VENDOR -f -
